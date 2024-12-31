@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Website Logo Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.logo {
+  text-decoration: none;
+}
+
+.logo h1 {
+  color: #cf5f5f;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  animation: logoAnimation 2s ease-out; /* Animation for the logo */
+}
+
+/* Logo Animation */
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0) rotate(0deg); /* Start with logo invisible and no rotation */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(360deg); /* Grow the logo and rotate */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg); /* End with normal size and rotation */
+    opacity: 1;
+  }
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #e0696f;
+}
+
+/* Home Section */
+.home-section {
+  height: 100vh;
+  background: url('https://via.placeholder.com/1500x1000') no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-content h2 {
+  font-size: 3rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+}
+
+/* About Section */
+.about {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  text-align: center;
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+
+
+</style>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <a href="#home" class="logo">
+        <h1>HOMEWORK</h1>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="file:///C:/Users/ADMIN/OneDrive/Desktop/coding%20web/profile%20web/calender.html">Date</a></li>
+        <li><a href="#back">Back</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h2>Welcome to My Site!</h2>
+      <p>Your success starts here.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>This is where we tell our story and vision for the future.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 MySite. All rights reserved.</p>
+  </footer>
+
+  <script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+  </script>
+</body>
+</html>

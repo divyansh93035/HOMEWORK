@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modern Website</title>
+</head>
+<style>
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  display: inline-block;
+  animation: logoAnimation 2s ease-out; /* Apply the animation */
+}
+
+.logo h1 {
+  color: #d84e4e;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+}
+
+/* Keyframe Animation for Logo */
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0) rotate(0deg); /* Start with logo invisible and no rotation */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(360deg); /* Rotate 360 degrees and scale up */
+    opacity: 1; /* Fade in */
+  }
+  100% {
+    transform: scale(1) rotate(360deg); /* End with normal size and final rotation */
+    opacity: 1;
+  }
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #d64545;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('https://via.placeholder.com/1500x1000') no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+}
+
+.hero-content button {
+  background-color: #f0a500;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #e68a00;
+}
+
+/* Other Sections (unchanged) */
+.about {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.services {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.services .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.service-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+
+.contact {
+  background-color: #f4f4f4;
+  padding: 80px 0;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f0a500;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e68a00;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .services .container {
+    flex-direction: column;
+  }
+
+  .service-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+</style>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>RAJPUT</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="file:///D:/coding%20project/profile%20web/Modern%20Login%20Form.html">Login</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Modern Website</h2>
+      <p>Let's create something amazing together.</p>
+      <button onclick="scrollToSection('about')">Learn More</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>This is where we tell our story and vision for the future.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-card">
+        <h3>Web Design</h3>
+        <p>Building beautiful and responsive websites.</p>
+      </div>
+      <div class="service-card">
+        <h3>Development</h3>
+        <p>Creating seamless and fast web applications.</p>
+      </div>
+      <div class="service-card">
+        <h3>NCERT HELP</h3>
+        <p>school work help websites.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      
+      <form id="contact-form">
+        <h1>Whatsapp Number</h1>
+        <h2>9303538305</h2>
+        <button onclick="location.href='https://web.whatsapp.com/';">Message</button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 MySite. All rights reserved.</p>
+  </footer>
+
+  <script>
+
+    // Hamburger Menu Toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Smooth Scroll for Learn More button
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  window.scrollTo({
+    top: element.offsetTop - 50, // Adjust for fixed header
+    behavior: "smooth",
+  });
+}
+
+// Contact Form Validation (simple example)
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (!name || !email || !message) {
+    alert('Please fill in all fields!');
+  } else {
+    alert('Message sent successfully!');
+  }
+});
+
+  </script>
+</body>
+</html>
